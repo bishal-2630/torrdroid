@@ -1,8 +1,8 @@
 ---
 title: TorrDroid Clone
 emoji: 📽️
-colorFrom: teal
-colorTo: black
+colorFrom: indigo
+colorTo: gray
 sdk: docker
 pinned: false
 ---
