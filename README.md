@@ -1,16 +1,20 @@
-# torrdroid
+---
+title: TorrDroid Clone
+emoji: 📽️
+colorFrom: teal
+colorTo: black
+sdk: docker
+pinned: false
+---
 
-A new Flutter project.
+# TorrDroid Clone
 
-## Getting Started
+A fully functional clone of the TorrDroid Android app, built with Flutter.
 
-This project is a starting point for a Flutter application.
+## Features
+- Torrent Search (1337x)
+- Download Manager (Mocked for Web, Native for Android/Windows)
+- Material 3 Dark Theme
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Deployment
+This app is deployed to [Hugging Face Spaces](https://huggingface.co/spaces/Bishal26/torrdroid) using a multi-stage Docker build.
