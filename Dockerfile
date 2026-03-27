@@ -1,16 +1,8 @@
 # Stage 1: Build Flutter Web
-FROM debian:latest AS build-env
+FROM ghcr.io/cirruslabs/flutter:stable AS build-env
 
-RUN apt-get update && apt-get install -y \
-    curl git unzip xz-utils libglu1-mesa \
-    python3 python3-pip
-
-# Install Flutter
-RUN git clone https://github.com/flutter/flutter.git /usr/local/flutter
-ENV PATH="/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/bin:${PATH}"
-RUN flutter doctor -v
-RUN flutter channel stable
-RUN flutter upgrade
+# Set root user for permissions
+USER root
 
 # Copy project files
 WORKDIR /app
@@ -37,5 +29,8 @@ COPY --from=build-env /app/build/web ./web
 
 # Expose port
 EXPOSE 7860
+
+# Add environment variable for HF
+ENV HF_SPACE=true
 
 CMD ["python", "main.py"]
