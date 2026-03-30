@@ -1,0 +1,29 @@
+# Local build artifacts
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# IDE files
+.idea/
+.vscode/
+.history/
+*.iml
+
+# Platform specific (not needed for web build)
+android/
+ios/
+windows/
+linux/
+macos/
+
+# Git
+.git
+.github
+.gitignore
+
+# Deployment
+deployment/Dockerfile
